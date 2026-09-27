@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Janošík</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      line-height: 1.6;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(13, 17, 23, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      border-bottom: 1px solid #21262d;
+    }
+    nav .logo { font-weight: 700; font-size: 1.2rem; color: #58a6ff; }
+    nav ul { display: flex; gap: 2rem; list-style: none; }
+    nav a { color: #e6edf3; text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: #58a6ff; }
+    section { padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; }
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      background: linear-gradient(135deg, #58a6ff, #a371f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+    .hero p { font-size: 1.3rem; color: #8b949e; max-width: 600px; }
+    h2 { font-size: 2rem; margin-bottom: 2rem; color: #58a6ff; }
+    .about p { font-size: 1.1rem; color: #c9d1d9; max-width: 700px; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      aspect-ratio: 16/10;
+      background: linear-gradient(135deg, #161b22, #21262d);
+      border-radius: 12px;
+      border: 1px solid #30363d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8b949e;
+      transition: transform 0.3s, border-color 0.3s;
+      overflow: hidden;
+    }
+    .gallery-item:hover { transform: translateY(-5px); border-color: #58a6ff; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+    .contact { text-align: center; }
+    .contact a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.8rem 1.8rem;
+      background: #21262d;
+      color: #e6edf3;
+      text-decoration: none;
+      border-radius: 8px;
+      border: 1px solid #30363d;
+      transition: all 0.2s;
+    }
+    .contact a:hover { background: #58a6ff; color: #0d1117; border-color: #58a6ff; }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #8b949e;
+      border-top: 1px solid #21262d;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      nav ul { gap: 1rem; font-size: 0.9rem; }
+      section { padding: 4rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Simon</div>
+    <ul>
+      <li><a href="#o-mne">O mne</a></li>
+      <li><a href="#galeria">Galéria</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>Simon Janošík</h1>
+    <p>Developer. Tvorím veci, ktoré ma bavia.</p>
+  </section>
+
+  <section class="about" id="o-mne">
+    <h2>O mne</h2>
+    <p>Sem napíš pár viet o sebe — čo robíš, čo ťa baví, na čom pracuješ.</p>
+  </section>
+
+  <section id="galeria">
+    <h2>Galéria</h2>
+    <div class="gallery">
+      <div class="gallery-item">Fotka 1</div>
+      <div class="gallery-item">Fotka 2</div>
+      <div class="gallery-item">Fotka 3</div>
+      <div class="gallery-item">Fotka 4</div>
+      <div class="gallery-item">Fotka 5</div>
+      <div class="gallery-item">Fotka 6</div>
+    </div>
+  </section>
+
+  <section class="contact" id="kontakt">
+    <h2>Kontakt</h2>
+    <a href="mailto:tvoj@email.com">Email</a>
+    <a href="https://github.com/simonjanosik15-byte">GitHub</a>
+    <a href="#">Discord</a>
+  </section>
+
+  <footer>
+    © 2025 Simon Janošík
+  </footer>
+
+</body>
+</html>
